@@ -8,6 +8,6 @@ public class Archer extends MilitaryUnit{
 
     @Override
     public int getHitPoints() {
-        return doDamage();
+        return getHealth();
     }
 }

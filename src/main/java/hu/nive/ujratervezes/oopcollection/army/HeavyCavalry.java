@@ -17,11 +17,17 @@ public class HeavyCavalry extends MilitaryUnit {
     }
 
     @Override
-    public int getHitPoints() {
+    public int doDamage() {
         if (getIsFirstRound()) {
             setIsFirstRound(false);
             return doDamage() * 3;
         }
-        return doDamage();
+        return super.doDamage();
+    }
+
+    @Override
+    public int getHitPoints() {
+
+        return getHealth();
     }
 }
