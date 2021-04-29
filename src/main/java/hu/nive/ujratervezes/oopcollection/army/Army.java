@@ -6,14 +6,14 @@ import java.util.List;
 
 public class Army {
 
-    private final List<MilitaryUnit> unitlist = new ArrayList<>();
+    private final List<MilitaryUnit> unitList = new ArrayList<>();
 
     public void addUnit(MilitaryUnit militaryUnit) {
-        this.unitlist.add(militaryUnit);
+        this.unitList.add(militaryUnit);
     }
 
     public void damageAll(int damage) {
-        Iterator<MilitaryUnit> it = unitlist.iterator();
+        Iterator<MilitaryUnit> it = unitList.iterator();
 
         while (it.hasNext()) {
             MilitaryUnit unit = it.next();
@@ -26,13 +26,13 @@ public class Army {
 
     public int getArmyDamage() {
         int sum = 0;
-        for (MilitaryUnit unit : unitlist) {
+        for (MilitaryUnit unit : unitList) {
             sum += unit.getDamage();
         }
         return sum;
     }
 
     public int getArmySize() {
-        return unitlist.size();
+        return unitList.size();
     }
 }
