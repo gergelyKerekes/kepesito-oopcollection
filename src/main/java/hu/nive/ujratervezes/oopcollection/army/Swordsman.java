@@ -29,9 +29,4 @@ public class Swordsman extends MilitaryUnit {
         }
     }
 
-    @Override
-    public int getHitPoints() {
-
-        return getHealth();
-    }
 }

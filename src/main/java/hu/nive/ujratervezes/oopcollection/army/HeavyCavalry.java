@@ -25,9 +25,4 @@ public class HeavyCavalry extends MilitaryUnit {
         return super.doDamage();
     }
 
-    @Override
-    public int getHitPoints() {
-
-        return getHealth();
-    }
 }

@@ -28,7 +28,9 @@ public abstract class MilitaryUnit {
         return isArmoured;
     }
 
-    public abstract int getHitPoints();
+    public int getHitPoints() {
+        return getHealth();
+    }
 
     public int doDamage() {
         return this.damage;
