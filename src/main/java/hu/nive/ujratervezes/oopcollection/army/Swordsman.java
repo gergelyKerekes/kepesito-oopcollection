@@ -17,11 +17,21 @@ public class Swordsman extends MilitaryUnit {
     }
 
     @Override
-    public int getHitPoints() {
+    public void sufferDamage(int damage) {
         if (isFirstRound()) {
             setFirstRound(false);
-            return 0;
+        } else {
+            if (isArmoured()) {
+                setHealth(getHealth() - (damage / 2));
+            } else {
+                setHealth(getHealth() - damage);
+            }
         }
-        return doDamage();
+    }
+
+    @Override
+    public int getHitPoints() {
+
+        return getHealth();
     }
 }

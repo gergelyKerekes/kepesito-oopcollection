@@ -24,6 +24,10 @@ public abstract class MilitaryUnit {
         return damage;
     }
 
+    public boolean isArmoured() {
+        return isArmoured;
+    }
+
     public abstract int getHitPoints();
 
     public int doDamage() {
