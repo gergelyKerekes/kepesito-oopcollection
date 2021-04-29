@@ -37,10 +37,3 @@ public abstract class MilitaryUnit {
         this.health -= damage;
     }
 }
-
-/*
-
-
-sufferDamage(int damage): a paraméterül kapott értéket levonja az egység életerő pontjaiból,
-ha az egység páncélozott, akkor csak az érték felét vonjuk le.
- */

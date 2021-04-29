@@ -3,23 +3,23 @@ package hu.nive.ujratervezes.oopcollection.army;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class Army {
 
-    private List<MilitaryUnit> unitlist = new ArrayList<>();
+    private final List<MilitaryUnit> unitlist = new ArrayList<>();
 
     public void addUnit(MilitaryUnit militaryUnit) {
-        unitlist.add(militaryUnit);
+        this.unitlist.add(militaryUnit);
     }
 
     public void damageAll(int damage) {
         Iterator<MilitaryUnit> it = unitlist.iterator();
 
-        for (MilitaryUnit unit: unitlist) {
-            unit.setHealth(unit.getHealth() - 25);
+        while (it.hasNext()) {
+            MilitaryUnit unit = it.next();
+            unit.setHealth(unit.getHealth() - damage);
             if (unit.getHealth() < 25) {
-                unitlist.remove(unit);
+                it.remove();
             }
         }
     }

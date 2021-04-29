@@ -1,6 +1,6 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
-public class Swordsman extends MilitaryUnit{
+public class Swordsman extends MilitaryUnit {
 
     private boolean isFirstRound = true;
 
@@ -25,12 +25,3 @@ public class Swordsman extends MilitaryUnit{
         return doDamage();
     }
 }
-
-/*
-Swordsman
-A kardforgató életereje 100 pont, sebzése 10.
-Vagy van páncélja vagy nincs.
-
-Minden kardforgatónak van pajzsa, amivel kivédi az első őt ért csapást.
-A pajzs az első kapott sebzés 100%-át felfogja, majd összetörik, tovább nem használható.
- */
